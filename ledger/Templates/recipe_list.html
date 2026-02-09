@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>All Recipes</h2>
+    <ul>
+        {% for key, recipe in recipes.items %}
+            <li><a href="{{ recipe.link }}">{{ recipe.name }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
