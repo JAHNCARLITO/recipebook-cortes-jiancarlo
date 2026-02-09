@@ -5,7 +5,7 @@
     
    {% block content %}
         ul>
-            {% for key, recipe in recipes.items %}
+            {% for ingredient in ingredients %}
                 <li>
                     {{ingredient.quantity}} {{ingredient.name}}
                 </li>

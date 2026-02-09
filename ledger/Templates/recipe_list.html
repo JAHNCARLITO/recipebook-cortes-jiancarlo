@@ -5,7 +5,7 @@
     
    {% block content %}
         ul>
-            {% for key, recipe in recipes.items %}
+            {% for recipe in recipes %}
                 <li>
                     <a href="{{ recipe.link }}">{{ recipe.name }}</a>
                 </li>
