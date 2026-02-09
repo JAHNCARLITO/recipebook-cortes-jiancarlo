@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang ="en-US">
 <head>
-    <title>Recipe Book</title>
+    <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
     <header>
         <h1>Recipe Book</h1>
     </header>
-    <hr>
-    {% block content %}{% endblock %}
+    <div>
+        {% block content %}{% endblock %}
+    </div>
 </body>
 </html>
