@@ -67,7 +67,7 @@ def recipe_list(request):
         }
     ]
 }
-    return render(request, 'recipe_list.html', context)
+    return render(request, 'ledger/recipe_list.html', context)
 
 def recipe_1(request):
     context = {
@@ -96,7 +96,7 @@ def recipe_1(request):
     ],
     "link": "/recipe/1"
     }
-    return render(request, 'recipe_detail.html', context)
+    return render(request, 'ledger/recipe_details.html', context)
 
 def recipe_2(request):
     context = {
@@ -133,4 +133,4 @@ def recipe_2(request):
     ],
     "link": "/recipe/2"
     }
-    return render(request, 'recipe_detail.html', context)
+    return render(request, 'ledger/recipe_details.html', context)
