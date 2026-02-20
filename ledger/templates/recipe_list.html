@@ -1,13 +1,13 @@
-{% extends "ledger/template.html" %}
+{% extends "template.html" %}
 {% load static %}
 
-{% block title %}Recipe Book{% endblock %}
+{% block title %}Recipes{% endblock %}
     
    {% block content %}
         <ul>
             {% for recipe in recipes %}
                 <li>
-                    <a href="..{{ recipe.link }}">{{ recipe.name }}</a>
+                    <a href="{% url 'recipe_detail' recipe.pk %}">{{ recipe.name }}</a>
                 </li>
         {% endfor %}
     </ul>
