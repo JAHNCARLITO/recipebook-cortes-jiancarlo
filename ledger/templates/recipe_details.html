@@ -1,14 +1,18 @@
 {% extends "template.html" %}
 {% load static %}
 
-{% block title %}{{ name }}{% endblock %}
+    {% block content %}
+    <h1>{{ recipe.name }}</h1>
+    <p> <strong> Author: </strong> {{ customer.author.user.username }}</p>
+    <p> <strong> Author Bio: </strong> {{ customer.author.bio }}</p>
 
-   {% block content %}
         <ul>
             {% for ring in recipe.ingredients.all %}
                 <li>
                    <strong> {{ring.ingredient.name}} </strong> - {{ring.quantity}}
                 </li>
+            {% empty %}
+                <li> No ingredients found... </li>
         {% endfor %}
     </ul>
     <a href="{% url 'recipe_list' %}"> Back to List</a>
