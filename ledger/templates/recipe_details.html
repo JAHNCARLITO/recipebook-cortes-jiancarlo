@@ -4,8 +4,8 @@
     {% block content %}
     <h1>{{ recipe.name }}</h1>
     <p> <strong> Author: </strong> {{ customer.author.user.username }}</p>
-    <p> <strong> Author Bio: </strong> {{ customer.author.bio }}</p>
 
+    <h3> Ingredients </h3>
         <ul>
             {% for ring in recipe.ingredients.all %}
                 <li>
