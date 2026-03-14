@@ -22,12 +22,6 @@ html, body { margin: 0; padding: 0; }
     margin: 20px auto;
 }
 
-.form-button:hover {
-    background: linear-gradient(135deg, #ff5e00, #ffa500);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-}
-
 .form-button:active {
     transform: translateY(1px);
     box-shadow: 0 3px 6px rgba(0,0,0,0.2);
