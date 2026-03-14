@@ -12,4 +12,13 @@
                 <li> No recipes in the database. </li>
         {% endfor %}
     </ul>
+
+    <br>
+
+    {% if user.is_authenticated %}
+    <p>
+        <a href="{% url 'recipe_add' %}"> => Add New Recipe </a>
+    </p>
+    {% endif %}
+
 {% endblock %}

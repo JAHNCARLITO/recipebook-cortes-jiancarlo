@@ -15,5 +15,25 @@
                 <li> No ingredients found... </li>
         {% endfor %}
     </ul>
-    <a href="{% url 'recipe_list' %}"> Back to List</a>
+    
+    <hr>
+
+    <h3> Images </h3>
+    {% for recipe_image in recipe.photo.all %}
+        <img src="{{ recipe_image.image.url }}" class="recipe-image" alt="recipe_image.name">
+    {% endfor %}
+   
+    <hr>
+    
+    {% if user.is_authenticated %}
+        <p>
+            <a href="{% url 'recipe_add_image' recipe.pk %}">
+                => Add New Image for this Recipe
+            </a>
+        </p>
+    {% endif %}
+
+    <br>
+
+    <a href="{% url 'recipe_list' %}"> Back to List </a>
 {% endblock %}

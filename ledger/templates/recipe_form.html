@@ -1,0 +1,9 @@
+{% extends "template.html" %}
+{% block content %}
+<h3> Add a New Recipe </h3>
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Save New Recipe" class="form-button">
+    </form>
+{% endblock %}
